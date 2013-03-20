@@ -15,7 +15,7 @@ color mango
  set ai
  set expandtab               "以下三个配置配合使用，设置tab和缩进空格数
  set cursorline              "为光标所在行加下划线
- set smarttab                "使得退格键也能有4tab的效果"
+ set smarttab                "使得退格键也能有4tab的效果
  set smartindent             "智能缩进
 
  set autowrite  " Automatically write a file when leaving a modified buffer 
