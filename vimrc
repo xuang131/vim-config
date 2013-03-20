@@ -42,8 +42,8 @@ color mango
 " 把 F9 映射到 启动CommandT插件
  map <F9> :CommandT<CR>
 " 把 CTRL-S 映射为 保存,因为这个操作做得太习惯了
- inoremap <C-s> <esc>:w<cr>a
- nnoremap <C-s> :w<cr>a
+ nnoremap <C-S> <C-C>:w<CR>
+ inoremap <C-S> <C-C>:w<CR>
 " 把ctrl+x ctrl+o 字典补全简化为ctrl+x
  inoremap<C-k> <C-X><C-K>
 
