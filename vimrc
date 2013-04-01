@@ -11,6 +11,8 @@ color mango
  " 设置编码
  set enc=utf-8
 
+ "能使用鼠标
+ set mouse=a
  "自动缩进
  set ai
  set expandtab               "以下三个配置配合使用，设置tab和缩进空格数
@@ -104,6 +106,9 @@ Bundle "motemen/git-vim"
 
 "ruby debugger
 Bundle "astashov/vim-ruby-debugger"
+
+"ctags
+Bundle "vim-scripts/ctags.vim"
 
 noremap <C-W><C-U> :CtrlPMRU<CR>
 nnoremap <C-W>u :CtrlPMRU<CR>
