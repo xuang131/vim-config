@@ -157,3 +157,19 @@ let g:user_zen_expandabbr_key = '<c-d>'   "设置为ctlr+回车 扩展
 "}
 
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+"--------------------------------------------------------
+"" highline current line & column
+" DOES NOT WORK with colorscheme solarized and blackboard
+" "--------------------------------------------------------
+set cursorline
+set cursorcolumn
+highlight cursorline term=underline cterm=underline ctermbg=0 gui=NONE guibg=Grey40
+if has("autocmd")
+" current line
+au WinLeave * set nocursorline
+au WinEnter * set cursorline
+" current column
+au WinLeave * set nocursorcolumn
+au WinEnter * set cursorcolumn
+endif
