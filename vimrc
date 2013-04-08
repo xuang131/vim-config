@@ -109,6 +109,8 @@ Bundle "astashov/vim-ruby-debugger"
 
 "ctags, how to use: ctags -e --language-force=ruby  --exclude=.git --exclude='*.log' -R * `bundle show --paths`
 Bundle "vim-scripts/ctags.vim"
+"tagbar outline plugins
+Bundle "majutsushi/tagbar"
 
 noremap <C-W><C-U> :CtrlPMRU<CR>
 nnoremap <C-W>u :CtrlPMRU<CR>
