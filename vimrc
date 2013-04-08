@@ -107,7 +107,7 @@ Bundle "motemen/git-vim"
 "ruby debugger
 Bundle "astashov/vim-ruby-debugger"
 
-"ctags
+"ctags, how to use: ctags -e --language-force=ruby  --exclude=.git --exclude='*.log' -R * `bundle show --paths`
 Bundle "vim-scripts/ctags.vim"
 
 noremap <C-W><C-U> :CtrlPMRU<CR>
