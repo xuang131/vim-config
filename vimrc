@@ -162,8 +162,10 @@ let g:user_zen_expandabbr_key = '<c-d>'   "设置为ctlr+回车 扩展
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 "coffeescript settings
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+"au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+"ruby default indent
+au BufNewFile,BufReadPost *.rb setl shiftwidth=2 expandtab
 
 "--------------------------------------------------------
 "" highline current line & column
