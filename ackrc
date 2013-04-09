@@ -4,3 +4,4 @@
 --ignore-dir=node_modules
 --type-add=js=.coffee
 --type-add=html=.handlebars
+--type-add=html=.erb
