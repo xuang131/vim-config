@@ -1,0 +1,6 @@
+--ignore-dir=spec
+--ignore-dir=tmp
+--ignore-dir=exports
+--ignore-dir=node_modules
+--type-add=js=.coffee
+--type-add=html=.handlebars
