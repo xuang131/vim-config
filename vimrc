@@ -37,6 +37,9 @@ color mango
  set cindent shiftwidth=4
  set autoindent shiftwidth=4
  filetype plugin indent on
+
+" 把 F6映射为tabbar
+ map <F6> :TagbarToggle<CR>
 " 把 F7 映射到 启动MRU插件
  map <F7> :MRU<CR>
 " 把 F8 映射到 启动NERDTree插件
