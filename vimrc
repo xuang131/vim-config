@@ -1,64 +1,66 @@
+
 set guifont=Monaco:h12
 " syntax highlighting
 set background=dark
-"   " you can use `dark` or `light` as your background
+" you can use `dark` or `light` as your background
 color mango
 "
 "colorscheme mustang 
- " set guifontwide=WenQuanYi\ Zen\ Hei:h12:cGBK
- " 设定文件浏览器目录为当前目录
- set bsdir=buffer
- " 设置编码
- set enc=utf-8
+" set guifontwide=WenQuanYi\ Zen\ Hei:h12:cGBK
+" 设定文件浏览器目录为当前目录
+set bsdir=buffer
+" 设置编码
+set enc=utf-8
 
- "能使用鼠标
- set mouse=a
- "自动缩进
- set ai
- set expandtab               "以下三个配置配合使用，设置tab和缩进空格数
- set cursorline              "为光标所在行加下划线
- set smarttab                "使得退格键也能有4tab的效果
- set smartindent             "智能缩进
+"no swp files
+set noswapfile
+"能使用鼠标
+set mouse=a
+"自动缩进
+set ai
+set expandtab               "以下三个配置配合使用，设置tab和缩进空格数
+set cursorline              "为光标所在行加下划线
+set smarttab                "使得退格键也能有4tab的效果
+set smartindent             "智能缩进
 
- set autowrite  " Automatically write a file when leaving a modified buffer 
- set ignorecase              "检索时忽略大小写
- " 设置文件编码
- set fenc=utf-8
- " 设置文件编码检测类型及支持格式
- set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
- " 设置开启语法高亮
- syntax on
- "显示行号
- set number
- " 查找结果高亮度显示
- set hlsearch
- " tab宽度
- set tabstop=4
- set cindent shiftwidth=4
- set autoindent shiftwidth=4
- filetype plugin indent on
+set autowrite  " Automatically write a file when leaving a modified buffer
+set ignorecase              "检索时忽略大小写
+" 设置文件编码
+set fenc=utf-8
+" 设置文件编码检测类型及支持格式
+set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+" 设置开启语法高亮
+syntax on
+"显示行号
+set number
+" 查找结果高亮度显示
+set hlsearch
+" tab宽度
+set tabstop=2
+set cindent shiftwidth=2
+set autoindent shiftwidth=2
+filetype plugin indent on
 
-" 把 F6映射为tabbar
- map <F6> :TagbarToggle<CR>
+map <F6> :TagbarToggle<CR>
 " 把 F7 映射到 启动MRU插件
- map <F7> :MRU<CR>
+map <F7> :MRU<CR>
 " 把 F8 映射到 启动NERDTree插件
- map <F8> :NERDTree<CR>
+map <F8> :NERDTree<CR>
 " 把 F9 映射到 启动CommandT插件
- map <F9> :CommandT<CR>
+map <F9> :CommandT<CR>
 " 把 CTRL-S 映射为 保存,因为这个操作做得太习惯了
- nnoremap <C-S> <C-C>:w<CR>
- inoremap <C-S> <C-C>:w<CR>
+nnoremap <C-S> <C-C>:w<CR>
+inoremap <C-S> <C-C>:w<CR>
 " 把ctrl+x ctrl+o 字典补全简化为ctrl+x
- inoremap<C-k> <C-X><C-K>
+inoremap<C-k> <C-X><C-K>
 
 "javascript代码补全，使用ctrl+x o"
 autocmd FileType javascrīpt set omnifunc=javascrīptcomplete#CompleteJS
 
 " 打开javascript折叠
- let b:javascript_fold=1
+let b:javascript_fold=1
 " " 打开javascript对dom、html和css的支持
- let javascript_enable_domhtmlcss=1
+let javascript_enable_domhtmlcss=1
 
 "node.js 字典"
 au FileType nodejs set dictionary+=$HOME/.vim/dict/node.dict
@@ -85,7 +87,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
 Bundle 'wincent/Command-T'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'drmingdrmer/xptemplate'
+"Bundle 'drmingdrmer/xptemplate'
 Bundle 'danro/rename.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
@@ -93,8 +95,6 @@ Bundle 'scrooloose/nerdcommenter'
 "snipmate dependencies
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "honza/snipmate-snippets"
-Bundle "garbas/vim-snipmate"
 "ack better performance than grep
 Bundle "mileszs/ack.vim"
 "html/xml edit
@@ -106,6 +106,8 @@ Bundle "vim-scripts/mru.vim"
 Bundle "mattn/zencoding-vim"
 "git plugins
 Bundle "motemen/git-vim"
+"popular git plugins
+Bundle "tpope/vim-fugitive"
 
 "ruby debugger
 Bundle "astashov/vim-ruby-debugger"
@@ -114,6 +116,27 @@ Bundle "astashov/vim-ruby-debugger"
 Bundle "vim-scripts/ctags.vim"
 "tagbar outline plugins
 Bundle "majutsushi/tagbar"
+
+"snipmate requires snippets
+"dependencies
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/vim-snippets"
+Bundle "garbas/vim-snipmate"
+"easymotion
+Bundle "Lokaltog/vim-easymotion"
+"coffeescript
+Bundle "kchmck/vim-coffee-script"
+
+Bundle "vim-scripts/bufexplorer.zip"
+
+"simple next move: ]b, [f
+Bundle "tpope/vim-unimpaired"
+
+"repeat .
+Bundle "tpope/vim-repeat"
+"Minibufferexpoler
+"Bundle fholgado/minibufexpl.vim"
 
 noremap <C-W><C-U> :CtrlPMRU<CR>
 nnoremap <C-W>u :CtrlPMRU<CR>
@@ -157,7 +180,7 @@ let MRU_Max_Entries = 50
 "}
 
 "zencoding{
-let g:user_zen_expandabbr_key = '<c-d>'   "设置为ctlr+回车 扩展 
+let g:user_zen_expandabbr_key = '<c-d>'   "设置为ctrl+d 扩展
 "
 "}
 
@@ -178,10 +201,11 @@ set cursorline
 set cursorcolumn
 highlight cursorline term=underline cterm=underline ctermbg=0 gui=NONE guibg=Grey40
 if has("autocmd")
-" current line
-au WinLeave * set nocursorline
-au WinEnter * set cursorline
-" current column
-au WinLeave * set nocursorcolumn
-au WinEnter * set cursorcolumn
+    " current line
+    au WinLeave * set nocursorline
+    au WinEnter * set cursorline
+    " current column
+    au WinLeave * set nocursorcolumn
+    au WinEnter * set cursorcolumn
 endif
+
