@@ -1,14 +1,13 @@
-
 set guifont=Monaco:h12
 " syntax highlighting
-set background=dark
+"set background=dark
 " you can use `dark` or `light` as your background
 color mango
 "
 "colorscheme mustang 
 " set guifontwide=WenQuanYi\ Zen\ Hei:h12:cGBK
 " 设定文件浏览器目录为当前目录
-set bsdir=buffer
+"set bsdir=buffer
 " 设置编码
 set enc=utf-8
 
